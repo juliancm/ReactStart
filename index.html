@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Sally Student</title>
+</head>
+<body>
+  <div id="application-root"></div>
+  <script
+    src="https://unpkg.com/babel-standalone@6/babel.min.js">
+  </script>
+<script
+  src="https://unpkg.com/react@16/umd/react.development.js">
+</script>
+<script
+  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+</script>
+
+<script type="text/babel">
+  // Our code will go here
+  // App Component
+  function App(props) {
+    console.log(props)
+    return (
+    <div>
+    <header>
+      <div>{props.children}</div>
+   <img src="https://www.thevintagenews.com/wp-content/uploads/2019/02/rowan-atkinson-aphoto-by-antonio-zugaldia-cc-by-2-0.jpg" alt="incredibly beautiful face" />
+
+   <h2>Contact Info</h2>
+   <address>jc.juliancastro</address>
+   <a href="mailto:sally@student.com"> sally@student.com </a>
+   773.774.7772
+ </header>
+ <main>
+<section>
+ <h2>Education</h2>
+   <ul>
+     <li><h3>Gingerbread College, Bratwurst, MA</h3></li>
+   </ul>
+</section>
+<section>
+ <h2>Work History</h2>
+   <ul>
+     <li>
+       <h3>Chicken Nugget Factory</h3>
+       <h4>Nuggetification Specialist 1215-1776</h4>
+       <p>I nuggeted chickens all day!</p>
+     </li>
+     <li>
+       <h3>Robot Armory</h3>     <h4>Freeze Ray Engineer 1999-2000</h4>           <p>Apprenticed under Mr. Freeze.</p>
+     </li>
+   </ul>
+ </section>
+ </main>
+ </div>
+    );
+  }
+
+  // Nested elements inside the App
+  ReactDOM.render(
+    <App className='my-class'>
+      <h1>Sally Student</h1>
+    </App>,
+    document.querySelector('#application-root')
+  );
+</script>
+</body>
+</html>
